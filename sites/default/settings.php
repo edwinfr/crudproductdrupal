@@ -929,11 +929,11 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 $settings['config_sync_directory'] = 'sites/default/files/config_FDxfOfLJ7xM20By-T9mZYaY1VngLxX0UlVBXicLaaPec58tziEkXdG-p2VyASpWihz6QclUPXQ/sync';
 */
 $databases['default']['default'] = [
-  'database' => getenv('MYSQL_ADDON_DB') ?: 'b9f4femmo0vbboldpcb5',
-  'username' => getenv('MYSQL_ADDON_USER') ?: 'udvcldjualjcbrrz',
-  'password' => getenv('MYSQL_ADDON_PASSWORD') ?: 'znnkcieU53I3qd3Z3k7',
-  'host' => getenv('MYSQL_ADDON_HOST') ?: 'b9f4femmo0vbboldpcb5-mysql.services.clever-cloud.com',
-  'port' => getenv('MYSQL_ADDON_PORT') ?: '21856',
+  'database' => getenv('MYSQL_ADDON_DB') ?: 'bax2ibhlskgjoptix4lv',
+  'username' => getenv('MYSQL_ADDON_USER') ?: 'uet2cmir9keliirx',
+  'password' => getenv('MYSQL_ADDON_PASSWORD') ?: 'rfwLgEzlbSrkvBgeNGm',
+  'host' => getenv('MYSQL_ADDON_HOST') ?: 'bax2ibhlskgjoptix4lv-mysql.services.clever-cloud.com',
+  'port' => getenv('MYSQL_ADDON_PORT') ?: '21991',
   'driver' => 'mysql',
   'prefix' => '',
   'collation' => 'utf8mb4_general_ci',
