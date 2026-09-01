@@ -907,7 +907,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-$databases['default']['default'] = array (
+/*$databases['default']['default'] = array (
   'database' => 'drupal10',
   'username' => 'root',
   'password' => '',
@@ -920,3 +920,14 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_FDxfOfLJ7xM20By-T9mZYaY1VngLxX0UlVBXicLaaPec58tziEkXdG-p2VyASpWihz6QclUPXQ/sync';
+*/
+$databases['default']['default'] = [
+  'database' => getenv('MYSQL_ADDON_DB') ?: 'brkppwvhpz3cdkre69sg',
+  'username' => getenv('MYSQL_ADDON_USER') ?: 'ue0vvnfwgq7hcnil',
+  'password' => getenv('MYSQL_ADDON_PASSWORD') ?: 'U8fAdgEhp2fqrF8UGbh',
+  'host' => getenv('MYSQL_ADDON_HOST') ?: 'brkppwvhpz3cdkre69sg-mysql.services.clever-cloud.com',
+  'port' => getenv('MYSQL_ADDON_PORT') ?: '21704',
+  'driver' => 'mysql',
+  'prefix' => '',
+  'collation' => 'utf8mb4_general_ci',
+];
