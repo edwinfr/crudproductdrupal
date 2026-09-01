@@ -942,3 +942,7 @@ $databases['default']['default'] = [
     'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
   ],
 ];
+
+$settings['trusted_host_patterns'] = [
+  '^.*$',
+];
