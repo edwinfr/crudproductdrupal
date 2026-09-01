@@ -1,0 +1,77 @@
+<?php
+
+/**
+ * @file
+ * Instalación del módulo CRUD productos.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function productos_crud_schema() {
+  $schema['productos_crud'] = [
+    'description' => 'Tabla para productos con costo y stock.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'ID del producto.',
+      ],
+      'nombre' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'codigo' => [
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'categoria' => [
+        'type' => 'varchar',
+        'length' => 150,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'costo' => [
+        'type' => 'numeric',
+        'precision' => 10,
+        'scale' => 2,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'precio' => [
+        'type' => 'numeric',
+        'precision' => 10,
+        'scale' => 2,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'stock' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'descripcion' => [
+        'type' => 'text',
+        'not null' => FALSE,
+      ],
+      'created' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => ['id'],
+    'indexes' => [
+      'nombre' => ['nombre'],
+      'codigo' => ['codigo'],
+      'categoria' => ['categoria'],
+    ],
+  ];
+
+  return $schema;
+}

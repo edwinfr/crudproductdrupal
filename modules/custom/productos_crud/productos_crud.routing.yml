@@ -1,0 +1,37 @@
+productos_crud.list:
+  path: '/admin/productos'
+  defaults:
+    _title: 'Productos'
+    _controller: '\Drupal\productos_crud\Controller\ProductosCrudController::list'
+  requirements:
+    _permission: 'access productos crud'
+
+productos_crud.add:
+  path: '/admin/productos/add'
+  defaults:
+    _title: 'Agregar producto'
+    _form: '\Drupal\productos_crud\Form\ProductoForm'
+  requirements:
+    _permission: 'manage productos crud'
+
+productos_crud.edit:
+  path: '/admin/productos/{id}/edit'
+  defaults:
+    _title: 'Editar producto'
+    _form: '\Drupal\productos_crud\Form\ProductoForm'
+  requirements:
+    _permission: 'manage productos crud'
+
+productos_crud.delete:
+  path: '/admin/productos/{id}/delete'
+  defaults:
+    _controller: '\Drupal\productos_crud\Controller\ProductosCrudController::delete'
+  requirements:
+    _permission: 'manage productos crud'
+
+productos_crud.search:
+  path: '/admin/productos/search'
+  defaults:
+    _controller: '\Drupal\productos_crud\Controller\ProductosCrudController::search'
+  requirements:
+    _permission: 'access productos crud'

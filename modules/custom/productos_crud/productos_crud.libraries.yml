@@ -1,0 +1,12 @@
+productos_crud:
+  version: 1.x
+  css:
+    theme:
+      css/productos_crud.css: {}
+  js:
+    js/productos_crud.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/once

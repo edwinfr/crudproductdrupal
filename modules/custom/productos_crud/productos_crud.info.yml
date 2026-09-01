@@ -1,0 +1,5 @@
+name: 'CRUD Productos'
+description: 'Módulo CRUD para productos con búsqueda, paginación y AJAX.'
+package: Custom
+type: module
+core_version_requirement: ^10

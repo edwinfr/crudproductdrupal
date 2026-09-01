@@ -1,0 +1,55 @@
+<div class="productos-crud-wrapper">
+  <div class="row mb-3">
+    <div class="col-md-8">
+      <form method="get" action="{{ path('productos_crud.list') }}" class="productos-crud-search-form d-flex gap-2 align-items-center">
+        <input type="text" name="search" class="form-control" value="{{ filter }}" placeholder="Buscar producto..." />
+        <button type="submit" class="btn btn-primary">Buscar</button>
+        <a href="{{ path('productos_crud.add') }}" class="btn btn-success">Agregar</a>
+      </form>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered" data-page-size="5">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Código</th>
+          <th>Categoría</th>
+          <th>Costo</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody class="productos-crud-body">
+        {% for item in items %}
+          <tr data-name="{{ item.nombre|lower }}" data-code="{{ item.codigo|lower }}" data-category="{{ item.categoria|lower }}">
+            <td>{{ item.id }}</td>
+            <td>{{ item.nombre }}</td>
+            <td>{{ item.codigo }}</td>
+            <td>{{ item.categoria }}</td>
+            <td>${{ item.costo }}</td>
+            <td>${{ item.precio }}</td>
+            <td>{{ item.stock }}</td>
+            <td>
+              <a href="{{ path('productos_crud.edit', {'id': item.id}) }}" class="btn btn-sm btn-warning">Editar</a>
+              <a href="{{ path('productos_crud.delete', {'id': item.id}) }}" class="btn btn-sm btn-danger" onclick="return confirm('¿Eliminar producto?')">Eliminar</a>
+            </td>
+          </tr>
+        {% else %}
+          <tr class="productos-crud-empty-row">
+            <td colspan="8">No hay productos registrados.</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="productos-crud-pagination" aria-label="Paginación de productos"></div>
+
+  {% if pager %}
+    {{ pager }}
+  {% endif %}
+</div>

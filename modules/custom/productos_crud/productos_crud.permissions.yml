@@ -1,0 +1,6 @@
+access productos crud:
+  title: 'Acceder al CRUD de productos'
+  description: 'Permite ver el listado y buscar productos.'
+manage productos crud:
+  title: 'Administrar productos'
+  description: 'Permite crear, editar y eliminar productos.'

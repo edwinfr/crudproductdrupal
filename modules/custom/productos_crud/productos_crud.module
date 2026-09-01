@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Hooks para el módulo CRUD de productos.
+ */
+
+use Drupal\Core\Database\Connection;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function productos_crud_theme($existing, $type, $theme, $path) {
+  return [
+    'productos_list' => [
+      'variables' => [
+        'items' => [],
+        'pager' => NULL,
+        'filter' => '',
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function productos_crud_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Puede dejarse vacío, pero evita errores de instalación con formularios no usados.
+}
