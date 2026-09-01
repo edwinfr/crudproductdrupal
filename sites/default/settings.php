@@ -934,7 +934,6 @@ $databases['default']['default'] = [
   'password' => getenv('MYSQL_ADDON_PASSWORD') ?: 'znnkcieU53I3qd3Z3k7',
   'host' => getenv('MYSQL_ADDON_HOST') ?: 'b9f4femmo0vbboldpcb5-mysql.services.clever-cloud.com',
   'port' => getenv('MYSQL_ADDON_PORT') ?: '21856',
-  'uri' => getenv('MYSQL_ADDON_URI') ?: 'mysql://udvcldjualjcbrrz:znnkcieU53I3qd3Z3k7@b9f4femmo0vbboldpcb5-mysql.services.clever-cloud.com:21856/b9f4femmo0vbboldpcb5',
   'driver' => 'mysql',
   'prefix' => '',
   'collation' => 'utf8mb4_general_ci',
